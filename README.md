@@ -1,7 +1,8 @@
+</pre>
 # SELECT ('ФИО: Павел Воробьев');
 -- первый запрос
 --1.1
- 'select * from ratings LIMIT 10;'
+select * from ratings LIMIT 10;
 
 --1.2
 SELECT * FROM links
@@ -44,3 +45,5 @@ SELECT AVG(rating)
 FROM ratings
 INNER JOIN cte_test ON ratings.userid = cte_test.userid
 LIMIT 10;
+
+</pre>
