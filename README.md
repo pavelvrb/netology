@@ -1,5 +1,5 @@
 <pre>
-# SELECT ('ФИО: Павел Воробьев');
+SELECT ('ФИО: Павел Воробьев');
 -- первый запрос
 --1.1
 select * from ratings LIMIT 10;
@@ -16,9 +16,11 @@ WHERE ratings.rating = 5
 LIMIT 10;
 
 --3.1
-SELECT COUNT(movieid) from ratings
-WHERE rating IS NULL
+SELECT DISTINCT COUNT(links.movieid) as flms_without_rating
+FROM links LEFT JOIN ratings ON links.movieid=ratings.movieid
+WHERE ratings.rating IS NULL
 LIMIT 10;
+
 
 --3.2
 SELECT userid, AVG(rating) from ratings
@@ -44,5 +46,4 @@ HAVING COUNT(movieid) > 10)
 SELECT AVG(rating)
 FROM ratings
 INNER JOIN cte_test ON ratings.userid = cte_test.userid
-LIMIT 10;
-</pre>
+LIMIT 10;</pre>
