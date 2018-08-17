@@ -24,8 +24,6 @@ psql --host $APP_POSTGRES_HOST -U postgres -c '
     id bigint,
     tags VARCHAR
   );'
-psql --host $APP_POSTGRES_HOST  -U postgres -c \
-    "\\copy keywords FROM '/data/keywords.csv' DELIMITER ',' CSV HEADER"
 </pre>
 
 --2.2 ETL. Команда заливки данных в таблицу.
