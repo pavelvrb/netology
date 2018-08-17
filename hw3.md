@@ -40,7 +40,7 @@ AVG(rating) OVER (PARTITION BY movieid) as avg,
 COUNT(userid) OVER (PARTITION BY movieid) as cnt
 from ratings
 )
-SELECT DISTINCT movieid, avg, keywords INTO top_rated_tags
+SELECT DISTINCT movieid, avg, tags INTO top_rated_tags
 from top_rated
 INNER JOIN keywords ON keywords.id=top_rated.movieid
 WHERE cnt >50
