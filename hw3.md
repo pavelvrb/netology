@@ -22,7 +22,7 @@ psql --host $APP_POSTGRES_HOST  -U postgres -c \
 psql --host $APP_POSTGRES_HOST -U postgres -c '
   CREATE TABLE IF NOT EXISTS keywords (
     id bigint,
-    tags VARCHAR
+    tags TEXT
   );'
 </pre>
 
