@@ -31,8 +31,14 @@ CREATE OR REPLACE FUNCTION cross_arr (int[], int[]) RETURNS int[] language sql a
 </pre>
 <pre>
 WITH user_pairs as (SELECT agg.userId as u1, agg.userId as u2, agg.array_agg as ar1, agg.array_agg as ar2 from user_movies_agg as agg CROSS JOIN user_movies_agg GROUP BY agg.userid)
-SELECT u1, u2, cross_arr(ar1, ar2) INTO common_user_views FROM user_pairs;
+SELECT u1, u2, cross_arr(ar1, ar2) as cross INTO common_user_views FROM user_pairs;
 </pre>
+
+--функция diff_arr
 <pre>
 CREATE OR REPLACE FUNCTION diff_arr (int[], int[]) RETURNS int[] language sql as $FUNCTION$ select array(select unnest($1) except select unnest($2)); ; $FUNCTION$;
+</pre>
+
+<pre>
+SELECT u1, u2, diff_arr(cross) FROM common_user_views CROSS JOIN user_movies_agg LIMIT 10;
 </pre>
