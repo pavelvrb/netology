@@ -35,8 +35,8 @@ print(math.sin(math.radians(30)))
 a = 'x'
 b = 'y'
 a = b
-b = a
-print (a)
+b=b.replace('y','x')
+print (a,b)
 
 #*7
 int('10011', 2)
