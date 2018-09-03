@@ -4,4 +4,4 @@ RUN echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/reposit
 
 RUN apk update && apk upgrade && apk --no-cache --update-cache add postgresql-client su-exec curl nano
 
-COPY ./final-sql/* /home/
+COPY ./vrb/* /home/
