@@ -17,7 +17,7 @@ psql --host $APP_POSTGRES_HOST -U postgres -c '
     CreationDate timestamp,
     ParentId bigint,
     Score bigint,
-    IsAcceptedAnswer varchar(20)
+    IsAcceptedAnswer varchar(20),
     Body text
   );'
 
