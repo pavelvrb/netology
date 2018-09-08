@@ -13,7 +13,7 @@ echo "Загружаем answers.csv..."
 psql --host $APP_POSTGRES_HOST -U postgres -c '
   CREATE TABLE IF NOT EXISTS answers (
     Id bigint,
-    OwnerUserId bigint,
+    OwnerUserId bigint <> 'NA',
     CreationDate timestamp,
     ParentId bigint,
     Score bigint,
@@ -30,7 +30,7 @@ echo "Загружаем questions.csv..."
 psql --host $APP_POSTGRES_HOST -U postgres -c '
   CREATE TABLE IF NOT EXISTS questions (
     Id bigint,
-    OwnerUserId bigint,
+    OwnerUserId bigint <> 'NA',
     CreationDate timestamp,
     Score bigint,
     Title text,
