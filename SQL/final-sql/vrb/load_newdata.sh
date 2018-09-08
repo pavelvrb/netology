@@ -22,7 +22,7 @@ psql --host $APP_POSTGRES_HOST -U postgres -c '
   );'
 
 psql --host $APP_POSTGRES_HOST  -U postgres -c \
-    "\\copy answers FROM '/data/answers.csv' DELIMITER ',' CSV HEADER"
+    "\\copy answers FROM '/data/rquestions/answers.csv' DELIMITER ',' CSV HEADER"
 
 
 
@@ -38,7 +38,7 @@ psql --host $APP_POSTGRES_HOST -U postgres -c '
   );'
 
 psql --host $APP_POSTGRES_HOST -U postgres -c \
-    "\\copy questions FROM '/data/questions.csv' DELIMITER ',' CSV HEADER"
+    "\\copy questions FROM '/data/rquestions/questions.csv' DELIMITER ',' CSV HEADER"
 
 
 
@@ -51,5 +51,5 @@ psql --host $APP_POSTGRES_HOST -U postgres -c '
   );'
 
 psql --host $APP_POSTGRES_HOST  -U postgres -c \
-    "\\copy tags FROM '/data/tags.csv' DELIMITER ',' CSV HEADER"
+    "\\copy tags FROM '/data/rquestions/tags.csv' DELIMITER ',' CSV HEADER"
 
