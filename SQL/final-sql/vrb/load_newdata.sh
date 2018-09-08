@@ -17,7 +17,7 @@ psql --host $APP_POSTGRES_HOST -U postgres -c '
     CreationDate timestamp,
     ParentId bigint,
     Score bigint,
-    IsAcceptedAnswer varchar(20,
+    IsAcceptedAnswer varchar(20)
     Body text
   );'
 
@@ -28,7 +28,7 @@ psql --host $APP_POSTGRES_HOST  -U postgres -c \
 
 echo "Загружаем questions.csv..."
 psql --host $APP_POSTGRES_HOST -U postgres -c '
-  CREATE TABLE IF NOT EXISTS ratings (
+  CREATE TABLE IF NOT EXISTS questions (
     Id bigint,
     OwnerUserId bigint,
     CreationDate timestamp,
@@ -45,7 +45,7 @@ psql --host $APP_POSTGRES_HOST -U postgres -c \
 
 echo "Загружаем tags.csv..."
 psql --host $APP_POSTGRES_HOST -U postgres -c '
-  CREATE TABLE IF NOT EXISTS answers (
+  CREATE TABLE IF NOT EXISTS tags (
     Id bigint,
     tag text
   );'
