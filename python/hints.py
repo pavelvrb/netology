@@ -1,4 +1,4 @@
-библиотека itertools 
+#библиотека itertools 
  EX:
  <pre>
  itertools.combinations(iterable, [r]) - комбинации длиной r из iterable без повторяющихся элементов.
