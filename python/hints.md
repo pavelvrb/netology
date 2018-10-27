@@ -31,7 +31,7 @@
  ...
  ...
  # переменную вставляем в {}
-  text = <h3>CashLoanPledge RiskRep. Last updated: 02/10/2015 {dt} </h3><br>
+  text = <(html тег)>CashLoanPledge RiskRep. Last updated: 02/10/2015 {dt} </html тег><br>
  
  # после закрывающегося тега html 
   '''.format(dt=dt)
