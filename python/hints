@@ -1,4 +1,6 @@
 библиотека itertools 
  EX:
- <pre>itertools.combinations(iterable, [r]) - комбинации длиной r из iterable без повторяющихся элементов.
-  combinations('ABCD', 2) --> AB AC AD BC BD CD </pre>
+ <pre>
+ itertools.combinations(iterable, [r]) - комбинации длиной r из iterable без повторяющихся элементов.
+  combinations('ABCD', 2) --> AB AC AD BC BD CD 
+ </pre>
