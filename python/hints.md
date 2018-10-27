@@ -15,3 +15,25 @@
         print(i)
         break
  </pre>
+
+
+
+
+Вставка переменной питон в тело отправляемого html пиьсма
+
+  <pre>
+  Опытное применение – вставка текущей даты в тело письма:
+  
+  import datetime
+  dt= datetime.datetime.now()
+ ...
+ ...
+ ...
+ ...
+ # переменную вставляем в {}
+  text = '<h3>CashLoanPledge RiskRep. Last updated: 02/10/2015      {dt} </h3><br>' 
+ 
+ # после закрывающегося тега html 
+  '''.format(dt=dt)
+  
+  </pre>
