@@ -1,4 +1,4 @@
-Модуль itertools  подробнее на https://python-scripts.com/itertools
+Модуль 'itertools'  подробнее на https://python-scripts.com/itertools
  <pre>
  Опытное применение:
  s = [-5, -9, 4, 5]   найти 3 числа сумма которых равна нулю
